@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R9H-fE-FiO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DiceApp-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DiceApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eG-1H-NfU">
+                                <rect key="frame" x="156" y="336" width="62" height="32"/>
+                                <state key="normal" title="Roll" image="Roll">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didRoll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rTO-XM-n2p"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice1" translatesAutoresizingMaskIntoConstraints="NO" id="7pf-pi-6ME">
+                                <rect key="frame" x="34" y="131" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="h1c-Gq-kb6"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice1" translatesAutoresizingMaskIntoConstraints="NO" id="LBY-Kf-z49">
+                                <rect key="frame" x="221" y="131" width="120" height="120"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sum: 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6BL-Ah-9ka">
+                                <rect key="frame" x="160" y="288" width="54" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8eG-1H-NfU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2aQ-HP-DlP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LBY-Kf-z49" secondAttribute="trailing" constant="18" id="8NY-BC-pmC"/>
+                            <constraint firstItem="8eG-1H-NfU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="272" id="ARS-af-DcV"/>
+                            <constraint firstItem="8eG-1H-NfU" firstAttribute="top" secondItem="6BL-Ah-9ka" secondAttribute="bottom" constant="27" id="D67-8b-Slh"/>
+                            <constraint firstItem="6BL-Ah-9ka" firstAttribute="centerX" secondItem="8eG-1H-NfU" secondAttribute="centerX" id="D9l-rR-1z0"/>
+                            <constraint firstItem="LBY-Kf-z49" firstAttribute="leading" secondItem="7pf-pi-6ME" secondAttribute="trailing" constant="67" id="NOn-o2-JZ7"/>
+                            <constraint firstItem="7pf-pi-6ME" firstAttribute="top" secondItem="LBY-Kf-z49" secondAttribute="top" id="OBw-eI-vqW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7pf-pi-6ME" secondAttribute="bottom" constant="416" id="ZHX-y8-Z6A"/>
+                            <constraint firstItem="7pf-pi-6ME" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="18" id="k7V-9d-qdu"/>
+                            <constraint firstItem="7pf-pi-6ME" firstAttribute="bottom" secondItem="LBY-Kf-z49" secondAttribute="bottom" id="oUB-FQ-HT9"/>
+                            <constraint firstItem="7pf-pi-6ME" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="67" id="u61-GF-nEd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="DiceApp" id="HSA-zr-55U"/>
+                    <connections>
+                        <outlet property="die1" destination="7pf-pi-6ME" id="DC3-hg-j2f"/>
+                        <outlet property="die2" destination="LBY-Kf-z49" id="vbL-WA-2lV"/>
+                        <outlet property="sumLabel" destination="6BL-Ah-9ka" id="aHb-Ww-RKO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bgf-oX-CBn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R9H-fE-FiO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IGD-mj-YTU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LMa-V6-Syc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3H9-7D-Wxo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="189.59999999999999" y="-543.77811094452773"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Dice1" width="99" height="98"/>
+        <image name="Roll" width="32" height="32"/>
+    </resources>
+</document>
